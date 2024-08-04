@@ -1,0 +1,21 @@
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEB2YXNjb3NvdXNhLmNvbSIsImlhdCI6MTcxMDUzNDU2NSwiZXhwIjoxNzEwNTM0NjI1fQ.OVPAAyTPkVifNA_Zw-9MvduX9MpuBBtRnYXtO2PwgOk
+
+{
+  "firstName": "Firstname",
+  "lastName": "Lastname",
+  "email": "default@email@com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+Authorization: Bearer
+
+{
+"email": "default@email@com",
+"password": "password"
+}

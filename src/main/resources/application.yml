@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-security
+  jpa:
+    # Provide database platform that is being used
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      # New database is created when application starts and destroyed when application is stopped
+      ddl-auto: update
+    # Show sql when spring data jpa performs query
+    show-sql: false
+    properties:
+      hibernate:
+        # Format queries
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    # URL connection to database (spring-security is database name)
+    url: jdbc:postgresql://localhost:5432/database
+    username: guest
+    password: guest
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+token:
+  signing:
+    key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+
+logging.file.name: logs\application.log
+logging.pattern.file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+logging.level.pt: INFO

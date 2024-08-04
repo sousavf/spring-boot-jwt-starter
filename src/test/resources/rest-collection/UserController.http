@@ -1,0 +1,13 @@
+GET http://localhost:8080/api/v1/auth/email/valid
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email" : "default@email@com"
+}
+
+###
+GET http://localhost:8080/api/v1/user/find/all
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer
